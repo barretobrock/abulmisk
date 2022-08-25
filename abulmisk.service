@@ -1,0 +1,21 @@
+# Put this in /lib/systemd/system
+# Then
+# sudo chmod 644 <filename>
+# sudo systemctl daemon-reload
+# sudo systemctl enable <filename>
+
+[Unit]
+Description=Gunicorn instance to serve site
+After=network.target
+
+[Service]
+User=bobrock
+Group=bobrock
+Type=idle
+WorkingDirectory=/home/bobrock/extras/abulmisk
+Environment="PATH=/home/bobrock/venvs/abulmisk/bin"
+ExecStart=/home/bobrock/venvs/abulmisk/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 -m 007 wsgi:app --access-logfile '-' --error-logfile '-' --log-level 'debug'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

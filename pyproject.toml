@@ -1,0 +1,54 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "abulmisk"
+version = '0.0.1'
+description = "A Flask webapp for hosting services"
+authors = ["bobrock <bobrock@tuta.io>"]
+license = "MIT"
+readme = 'README.md'
+repository = 'https://github.com/barretobrock/abulmisk'
+packages = [
+    { include = 'abulmisk' },
+]
+include = ["CHANGELOG.md"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+gunicorn = "~20"
+pukr = { git = "https://github.com/barretobrock/pukr.git", branch = "main" }
+cinemagoer = "~2022"
+Flask = "~2"
+requests = "~2"
+Flask-Admin = "~1"
+Flask-Bcrypt = "~1"
+Flask-Login = "~0"
+Flask-Security = "~3"
+Flask-SQLAlchemy = "~2"
+itsdangerous = "~2"
+pandas = "~1.4"
+sqlalchemy = "~1"
+twilio = "~7"
+Werkzeug = "~2"
+WTForms = "~3"
+# Optional dependencies would go down here
+# example = { version = ">=1.7.0", optional = true }
+
+[tool.poetry.dev-dependencies]
+pre-commit = "~2"
+pytest = "~7"
+pytest-cov = "~3"
+flake8 = "~4"
+tox = "~3"
+
+[tool.isort]
+profile = 'black'
+force_grid_wrap = 2
+force_sort_within_sections = true
+skip_gitignore = true
+skip_glob = ['*_pb2.py', '*_pb2_grpc.py']
+
+[tool.poetry.extras]
+test = ["pytest"]
