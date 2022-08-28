@@ -43,6 +43,7 @@ class ProductionConfig(BaseConfig):
     """
     DEBUG = False
     LOG_DIR = _LOG_DIR.joinpath('abulmisk_prod')
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
 class DevelopmentConfig(BaseConfig):
@@ -53,3 +54,4 @@ class DevelopmentConfig(BaseConfig):
     TESTING = True
     TEMPLATES_AUTO_RELOAD = True
     LOG_DIR = _LOG_DIR.joinpath('abulmisk_dev')
+    LOG_DIR.mkdir(parents=True, exist_ok=True)

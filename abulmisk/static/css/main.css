@@ -9,8 +9,20 @@ body {
     border: 1px #acacac;
 }
 
+.bg-image {
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 100vh;
+}
+
+h1,
 h2,
 h3,
+h4,
+h5,
 fieldset,
 small.text-muted,
 .accordion-button,

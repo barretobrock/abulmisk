@@ -1,3 +1,4 @@
+import os
 from flask import (
     render_template,
     request,
@@ -21,4 +22,4 @@ def handle_err(err):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=os.environ.get('PORT', 5000), host='0.0.0.0')
