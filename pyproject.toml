@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "abulmisk"
-version = '0.0.2'
+version = '0.1.0'
 description = "A Flask webapp for hosting services"
 authors = ["bobrock <bobrock@tuta.io>"]
 license = "MIT"
@@ -17,31 +17,31 @@ include = ["CHANGELOG.md"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-gunicorn = "~20"
 pukr = { git = "https://github.com/barretobrock/pukr.git", branch = "main" }
-cinemagoer = "~2022"
-Flask = "~2"
-requests = "~2"
+gunicorn = "~21"
+cinemagoer = "~2023"
+Flask = "~2.3"
 Flask-Admin = "~1"
 Flask-Bcrypt = "~1"
 Flask-Login = "~0"
 Flask-Security = "~3"
-Flask-SQLAlchemy = "~2"
+Flask-SQLAlchemy = "~3"
 itsdangerous = "~2"
-pandas = "~1.4"
-sqlalchemy = "~1"
-twilio = "~7"
+jwt = "~1"
+pandas = "~2"
+requests = "~2"
+sqlalchemy = "~2"
 Werkzeug = "~2"
 WTForms = "~3"
 # Optional dependencies would go down here
 # example = { version = ">=1.7.0", optional = true }
 
 [tool.poetry.dev-dependencies]
-pre-commit = "~2"
+pre-commit = "~3"
 pytest = "~7"
-pytest-cov = "~3"
-flake8 = "~4"
-tox = "~3"
+pytest-cov = "~4"
+flake8 = "~6"
+tox = "~4"
 
 [tool.isort]
 profile = 'black'

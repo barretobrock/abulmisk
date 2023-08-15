@@ -13,7 +13,6 @@ from abulmisk.flask_base import (
 )
 from abulmisk.routes.admin import admin
 from abulmisk.routes.api import api
-from abulmisk.routes.koned import koned
 from abulmisk.routes.main import main
 from abulmisk.routes.projects import projects
 from abulmisk.routes.user import users
@@ -38,7 +37,7 @@ def create_app(*args, **kwargs) -> Flask:
     app.extensions.setdefault('loguru', logger)
 
     # Register routes
-    for rt in [admin, api, koned, main, projects, users]:
+    for rt in [admin, api, main, projects, users]:
         app.register_blueprint(rt)
 
     return app

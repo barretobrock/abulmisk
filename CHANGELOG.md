@@ -15,15 +15,15 @@ _Note: 'Unreleased' section below is used for untagged changes that will be issu
 #### Security
 __BEGIN-CHANGELOG__
  
+### [0.1.0] - 2023-08-15
+#### Added
+ - Python 3.11 support
+ 
 ### [0.0.2] - 2022-08-28
 #### Added
  - Background photo, CSS
 #### Changed
  - logging setup
-#### Deprecated
-#### Removed
-#### Fixed
-#### Security
 
 ### [0.0.1] - 2022-08-25
 #### Added
