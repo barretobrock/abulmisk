@@ -22,9 +22,6 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = f'sqlite://{DATA_DIR.joinpath("abulmisk.sqlite")}'
     SECRET_KEY = get_local_secret(KEY_DIR.joinpath('ABUL_SECRET_KEY'))
     REGISTER_KEY = get_local_secret(KEY_DIR.joinpath('REGISTRATION_KEY'))
-    TWILIO_SID = get_local_secret(KEY_DIR.joinpath('TWILIO_SID'))
-    TWILIO_TOKEN = get_local_secret(KEY_DIR.joinpath('TWILIO_TOKEN'))
-    CALL_ALLOW_LIST = get_local_secret(KEY_DIR.joinpath('CALL_ALLOW_LIST')).split(',')
     STATIC_DIR_PATH = '../static'
     TEMPLATE_DIR_PATH = '../templates'
 
