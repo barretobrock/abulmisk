@@ -15,6 +15,10 @@ _Note: 'Unreleased' section below is used for untagged changes that will be issu
 #### Security
 __BEGIN-CHANGELOG__
  
+### [0.1.1] - 2023-09-16
+#### Removed
+ - koned
+ 
 ### [0.1.0] - 2023-08-15
 #### Added
  - Python 3.11 support

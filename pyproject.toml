@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "abulmisk"
-version = '0.1.0'
+version = '0.1.1'
 description = "A Flask webapp for hosting services"
 authors = ["bobrock <bobrock@tuta.io>"]
 license = "MIT"
